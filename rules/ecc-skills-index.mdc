@@ -1,0 +1,60 @@
+---
+description: ECC skill index — when to invoke each of the 182 installed skills
+alwaysApply: true
+---
+
+# ECC Skill Library — Invocation Guide
+
+> **Rule hierarchy recap:**
+> 1. `common-development-workflow` — PRIMARY: plan → TDD → review → commit
+> 2. `common-testing`, `common-security`, `common-agents`, `common-coding-style` — extend primary
+> 3. `typescript-*`, `python-*`, `web-*` — language-scoped, auto-apply to matching files
+> 4. `karpathy-guidelines` — supplementary mindset (think before coding, surgical changes)
+> 5. This file — skill invocation triggers (use alongside all of the above)
+
+Skills live in `~/.cursor/skills/`. Invoke proactively — don't wait for the user to ask. Before writing custom code for any established pattern, check if a skill covers it.
+
+## Research & Discovery
+- User says "research / deep dive / investigate / what's the state of" → **deep-research**
+- Starting any new feature — find existing libs first → **search-first**
+- Market sizing, competitor analysis, investor due diligence → **market-research**
+- API or library docs question → **documentation-lookup**
+
+## Web3 / DeFi / Crypto (Primary Domain)
+- Solidity AMM, liquidity pool, or swap contract → **defi-amm-security**
+- Token balances, `decimals()`, amount formatting → **evm-token-decimals**
+- Autonomous trading agent or bot with wallet authority → **llm-trading-agent-security**
+- `keccak256` hashing in Node.js/TypeScript → **nodejs-keccak256**
+
+## Backend Development
+- New REST or GraphQL endpoint design → **api-design**
+- Repository/service/controller architecture → **backend-patterns**
+- DB schema changes, zero-downtime migrations → **database-migrations**
+- PostgreSQL query optimization, indexing → **postgres-patterns**
+- Docker, CI/CD, health checks, rollbacks → **deployment-patterns**
+- Docker Compose networking and volumes → **docker-patterns**
+
+## Security
+- Auth, user input, secrets, payments, any API endpoint → **security-review**
+- Wallets, private keys, transaction signing → **llm-trading-agent-security**
+
+## Code Quality & Testing
+- Any new feature or bug fix → **tdd-workflow** (tests first, 80%+ coverage)
+- Full build + lint + typecheck + test sweep → **verification-loop**
+- Playwright E2E for critical user flows → **e2e-testing**
+
+## TypeScript / Node.js
+- TypeScript project patterns → **coding-standards**
+- MCP server authoring → **mcp-server-patterns**
+- Next.js 16+ or Turbopack → **nextjs-turbopack**
+- Bun runtime, bundler, or test runner → **bun-runtime**
+
+## Context / Token Management
+- After research phase, before implementation → **strategic-compact** (suggest compact)
+- Long session with completed milestones → **strategic-compact**
+
+## User Context
+- Domain: Web3, DeFi, crypto backends (EVM, Solidity, ethers.js/viem, Node.js/TypeScript)
+- Always research before building — use **search-first** and **deep-research**
+- Never sacrifice quality or test coverage for token savings
+- Stack: TypeScript-first; Python for scripts
